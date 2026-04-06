@@ -20,7 +20,7 @@ git fetch origin main
 ```
 2. Ambil file spesifik dari pusat (main) ke branch lokal sekarang, FILE YANG PERLU DIUPDATE BIASANYA YNG DI COMMAND INI DOANG<br>
 ```
-git checkout origin/main -- config.yaml requirements.txt assets/ data/
+git checkout origin/main -- config.yaml requirements.txt assets/ data/ README.md
 ```
 3. Simpan perubahan sinkronisasi tersebut<br>
 ```
