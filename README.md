@@ -1,6 +1,6 @@
 ## !! PENTING !! Perintah Git untuk Inisialisasi Proyek
 ```
-cd "jalur/ke/folder/proyek/kalian"<br>
+cd "jalur/ke/folder/proyek/kalian"
 git clone https://github.com/ranslemus/topic_modeling_KBMI4.git
 ```
 
@@ -8,14 +8,14 @@ git clone https://github.com/ranslemus/topic_modeling_KBMI4.git
 ```
 git checkout -b (nama branch baru)
 git status
-git add assets/kamus_slang_bank.json
+git add (apa aja yang di add)
 git commit -m "Update: ...."
 git push origin (nama branch baru)
 ```
 ## ONLY TIME TO PULL DARI MAIN IS TO SYNC CONFIG & DATA. Kalo udah di branch kalian, pasti from time to time config dan data akan diubah. Cara update semua file tersebut:
 1. Update catatan dari server (tanpa menggabungkan apapun dulu)<br>
 ```
-git fetch origin main<br>
+git fetch origin main
 ```
 2. Ambil file spesifik dari pusat (main) ke branch lokal sekarang<br>
 ```
