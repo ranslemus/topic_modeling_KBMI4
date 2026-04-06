@@ -1,37 +1,46 @@
 ## !! PENTING !! Perintah Git untuk Inisialisasi Proyek
-
+```
 cd "jalur/ke/folder/proyek/kalian"<br>
 git clone https://github.com/ranslemus/topic_modeling_KBMI4.git
+```
 
-## !! PENTING !! Please buat branch baru, kita ga merge2 ke main, karena nanti buat main adalah kerjaan yang paling optimal
-git checkout -b (nama branch baru)<br>
-git status<br>
-git add assets/kamus_slang_bank.json<br>
-git commit -m "Update: ...."<br>
-git push origin (nama branch baru)<br>
-
-## Kalo udah di branch kalian, pasti from time to time config dan data akan diubah. Cara update semua file tersebut:
+## !! PENTING !! Please buat branch baru, kita ga merge2 ke main, karena  main nnti adalah kerjaan yang paling optimal
+```
+git checkout -b (nama branch baru)
+git status
+git add assets/kamus_slang_bank.json
+git commit -m "Update: ...."
+git push origin (nama branch baru)
+```
+## ONLY TIME TO PULL DARI MAIN IS TO SYNC CONFIG & DATA. Kalo udah di branch kalian, pasti from time to time config dan data akan diubah. Cara update semua file tersebut:
 1. Update catatan dari server (tanpa menggabungkan apapun dulu)<br>
-git fetch origin main<br><br>
-
+```
+git fetch origin main<br>
+```
 2. Ambil file spesifik dari pusat (main) ke branch lokal sekarang<br>
-git checkout origin/main -- config.yaml requirements.txt assets/ data/<br><br>
-
-3. Simpan perubahan sinkronisasi tersebut
-git commit -m "pesan commit"<br>
+```
+git checkout origin/main -- config.yaml requirements.txt assets/ data/
+```
+3. Simpan perubahan sinkronisasi tersebut<br>
+```
+git commit -m "pesan commit"
+```
 
 --- 
 
 ## Kerjaan admin
 1. Pastikan kamu di main <br>
-git checkout main<br>
-
+```
+git checkout main
+```
 2. Edit file config.yaml (pakai VS Code/Notepad)<br>
 
 3. Simpan dan kirim ke pusat<br>
-git add config.yaml<br>
-git commit -m "Admin: Update n_neighbors di config"<br>
-git push origin main<br>
+```
+git add config.yaml
+git commit -m "Admin: Update n_neighbors di config"
+git push origin main
+```
 
 # !! Gausah merge ke main !!
 
