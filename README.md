@@ -27,6 +27,11 @@ git checkout origin/main -- config.yaml requirements.txt assets/ data/ README.md
 git commit -m "pesan commit"
 ```
 
+4. Push ke branch u<br>
+```
+git push origin (nama branch lu)
+```
+
 --- 
 
 ## Kerjaan admin
