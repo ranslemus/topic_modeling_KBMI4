@@ -1,6 +1,4 @@
 # change this file if needed
-
-
 global:
   seed: 42                  
   device: "cuda"            
