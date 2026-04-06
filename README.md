@@ -10,7 +10,30 @@ git add assets/kamus_slang_bank.json<br>
 git commit -m "Update: ...."<br>
 git push origin (nama branch baru)<br>
 
-## Gausah gabung ke main
+## Kalo udah di branch kalian, pasti from time to time config dan data akan diubah. Cara update semua file tersebut:
+1. Update catatan dari server (tanpa menggabungkan apapun dulu)<br>
+git fetch origin main<br><br>
+
+2. Ambil file spesifik dari pusat (main) ke branch lokal sekarang<br>
+git checkout origin/main -- config.yaml requirements.txt assets/ data/<br><br>
+
+3. Simpan perubahan sinkronisasi tersebut
+git commit -m "pesan commit"<br>
+
+--- 
+
+## Kerjaan admin
+1. Pastikan kamu di main <br>
+git checkout main<br>
+
+2. Edit file config.yaml (pakai VS Code/Notepad)<br>
+
+3. Simpan dan kirim ke pusat<br>
+git add config.yaml<br>
+git commit -m "Admin: Update n_neighbors di config"<br>
+git push origin main<br>
+
+# !! Gausah merge ke main !!
 
 ---
 
@@ -21,6 +44,8 @@ git push origin (nama branch baru)<br>
 4. Random Seed: seed -> 42.
 
 ---
+
+
 
 # 🏦 Identifikasi Keluhan Nasabah Bank KBMI 4 Berbasis Aspek 
 ### Pendekatan Hybrid IndoBERT dan BERTopic
