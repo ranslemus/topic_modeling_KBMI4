@@ -1,17 +1,26 @@
 ## !! PENTING !! Perintah Git untuk Inisialisasi Proyek
 
-cd "jalur/ke/folder/proyek/kalian"
+cd "jalur/ke/folder/proyek/kalian"<br>
 git clone https://github.com/ranslemus/topic_modeling_KBMI4.git
 
-## Please buat branch baru, kita ga merge2 ke main, karena nanti buat main adalah kerjaan yang paling optimal
-git checkout -b (nama branch baru)
-git status
-git add assets/kamus_slang_bank.json
-git commit -m "Update: ...."
-git push origin (nama branch baru)
+## !! PENTING !! Please buat branch baru, kita ga merge2 ke main, karena nanti buat main adalah kerjaan yang paling optimal
+git checkout -b (nama branch baru)<br>
+git status<br>
+git add assets/kamus_slang_bank.json<br>
+git commit -m "Update: ...."<br>
+git push origin (nama branch baru)<br>
 
 ## Gausah gabung ke main
 
+---
+
+## INSTRUKSI TIM
+1. Python 3.10+
+2. Patuhi config.yaml: Jangan mengubah parameter min_cluster_size atau n_neighbors di file lokal tanpa diskusi tim. Jika menemukan parameter yang lebih baik, update di repo agar semua orang menggunakan setting yang sama.
+3. Kamus Slang (Dictionary): Jika kamu menambahkan kata baru di assets/kamus_slang_bank.json, segera commit agar proses preprocessing teman yang lain tidak berbeda hasilnya.
+4. Random Seed: seed -> 42.
+
+---
 
 # 🏦 Identifikasi Keluhan Nasabah Bank KBMI 4 Berbasis Aspek 
 ### Pendekatan Hybrid IndoBERT dan BERTopic
@@ -38,14 +47,6 @@ Tujuan utama proyek ini adalah mengotomatisasi identifikasi keluhan utama nasaba
 4. PT Bank Negara Indonesia (Persero) Tbk (BNI Mobile Banking)
 
 ---
-
-## INSTRUKSI TIM
-1. Gunakan Python 3.10+
-2. Update Library: Jika ada perubahan di requirements.txt, segera jalankan:
-pip install -r requirements.txt
-3. Patuhi config.yaml: Jangan mengubah parameter min_cluster_size atau n_neighbors di file lokal tanpa diskusi tim. Jika menemukan parameter yang lebih baik, update di repo agar semua orang menggunakan setting yang sama.
-4. Kamus Slang (Dictionary): Jika kamu menambahkan kata baru di assets/kamus_slang_bank.json, segera commit agar proses preprocessing teman yang lain tidak berbeda hasilnya.
-5. Random Seed: Kita menggunakan seed: 42. Jangan diubah agar hasil klasterisasi tetap reproducible.
 
 
 ## 🛠️ Struktur Folder
