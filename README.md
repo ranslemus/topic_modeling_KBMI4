@@ -53,6 +53,26 @@ git push origin main
 
 ---
 
+## CARA PEMAKAIAN config.yaml FILE
+
+1. Install pyyaml
+```
+pip install pyyaml
+```
+2. Baca config di python:
+```
+import yaml
+def load_config(config_path="config.yaml"):
+    with open(config_path, "r") as f:
+        return yaml.safe_load(f)
+config = load_config()
+```
+
+3.  Sekarang kalian bisa akses isi config seperti dictionary Python
+```
+print(f"Project Name: {config['project']['name']}") <- kalo akses yang nested kek gini
+print(f"Using Model: {config['indobert']['model_name']}") <- kalo akses yang nested kek gini
+```
 
 
 # 🏦 Identifikasi Keluhan Nasabah Bank KBMI 4 Berbasis Aspek 
