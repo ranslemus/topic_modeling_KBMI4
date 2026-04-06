@@ -1,3 +1,4 @@
+# ‼️TEAM PLEASE READ‼️ 
 ## !! PENTING !! Perintah Git untuk Inisialisasi Proyek
 ```
 cd "jalur/ke/folder/proyek/kalian"
