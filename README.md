@@ -43,8 +43,6 @@ git commit -m "Admin: Update n_neighbors di config"
 git push origin main
 ```
 
-# !! Gausah merge ke main !!
-
 ---
 
 ## INSTRUKSI TIM
