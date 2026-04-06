@@ -5,7 +5,7 @@ cd "jalur/ke/folder/proyek/kalian"
 git clone https://github.com/ranslemus/topic_modeling_KBMI4.git
 ```
 
-## !! PENTING !! Please buat branch baru, kita ga merge2 ke main, karena  main nnti adalah kerjaan yang paling optimal
+## !! PENTING !! Do this only ONCE. Please buat branch baru, kita ga merge2 ke main, karena  main nnti adalah kerjaan yang paling optimal
 ```
 git checkout -b (nama branch baru)
 git status
@@ -13,7 +13,8 @@ git add (apa aja yang di add)
 git commit -m "Update: ...."
 git push origin (nama branch baru)
 ```
-## ONLY TIME TO PULL DARI MAIN IS TO SYNC CONFIG & DATA. Kalo udah di branch kalian, pasti from time to time config dan data akan diubah. Cara update semua file tersebut:
+
+## ONLY TIME TO PULL DARI MAIN IS TO SYNC CONFIG & DATA. INI YG HARUS DILAKUIN RUTIN. Kalo udah di branch kalian, pasti from time to time config dan data akan diubah. Cara update semua file tersebut:
 1. Update catatan dari server (tanpa menggabungkan apapun dulu)<br>
 ```
 git fetch origin main
