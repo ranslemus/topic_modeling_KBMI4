@@ -1,0 +1,56 @@
+# change this file if needed
+
+
+global:
+  seed: 42                  
+  device: "cuda"            
+  output_path: "./results/"
+  logs_path: "./logs/"
+
+# --- Data & Sampling ---
+data:
+  raw_file: "data/raw/bank_reviews_2022_2024.csv"
+  processed_file: "data/processed/cleaned_reviews.csv"
+  banks: ["BCA", "BRI", "Mandiri", "BNI"]
+  ratings_filter: [1, 2, 3] # Only complaints
+  test_size: 0.2
+  val_size: 0.1
+
+# --- Text Preprocessing Pipeline ---
+# This ensures "ga" vs "tidak" is handled identically by everyone
+preprocessing:
+  do_lowercase: true
+  remove_digits: true
+  remove_special_chars: true
+  slang_dictionary: "assets/kamus_slang_bank.json"
+  stopwords_file: "assets/indonesian_stopwords.txt"
+  max_token_length: 128     # Standard for IndoBERT base
+
+# --- Model 1: IndoBERT (The Embedder) ---
+indobert:
+  model_name: "indobenchmark/indobert-base-p1"
+  batch_size: 32
+  pooling_strategy: "mean"  # Options: 'mean', 'cls', or 'max'
+
+# --- Model 2: BERTopic Components ---
+# Tuning these is where the "Hybrid" magic happens
+bertopic:
+  umap:
+    n_neighbors: 15         # Balance between local and global structure
+    n_components: 5         # Target dimensions for HDBSCAN
+    min_dist: 0.0
+    metric: "cosine"
+    
+  hdbscan:
+    min_cluster_size: 15    # Minimum ulasan per complaint category
+    min_samples: 5          # Controls how many "noise" points are allowed
+    cluster_selection_method: "eom"
+    
+  ctfidf:
+    bm25_weighting: true    # Better for short texts like Play Store reviews
+    reduce_frequent_words: true
+
+  # Final Topic Generation
+  nr_topics: "auto"         # Let HDBSCAN decide, or set integer (e.g., 20)
+  calculate_probabilities: true
+  top_n_words: 10
