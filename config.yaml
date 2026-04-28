@@ -7,19 +7,19 @@ global:
 
 # --- Data & Sampling ---
 data:
-  raw_file: "data/raw/bank_reviews_2022_2024.csv"
+  raw_dir: "data/raw/"
   processed_file: "data/processed/cleaned_reviews.csv"
-  banks: ["BCA", "BRI", "Mandiri", "BNI"]
+  banks: ["BCAMobile", "BRImo", "livin_mandiri", "Wondr_BNI"]
   ratings_filter: [1, 2, 3] # Only complaints
   test_size: 0.2
   val_size: 0.1
 
 # --- Text Preprocessing Pipeline ---
-# This ensures "ga" vs "tidak" is handled identically by everyone
 preprocessing:
   do_lowercase: true
   remove_digits: true
   remove_special_chars: true
+  min_word_count: 3          # Minimum words to keep a review
   slang_dictionary: "assets/kamus_slang_bank.json"
   stopwords_file: "assets/indonesian_stopwords.txt"
   max_token_length: 128     # Standard for IndoBERT base
