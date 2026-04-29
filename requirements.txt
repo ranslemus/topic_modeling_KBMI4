@@ -1,0 +1,22 @@
+# --- Data Collection & Manipulation ---
+google-play-scraper==1.2.4
+pandas
+beautifulsoup4
+
+# --- NLP & Text Preprocessing ---
+Sastrawi
+regex
+
+# --- Topic Modeling Hybrid (Core) ---
+bertopic
+sentence-transformers
+umap-learn
+hdbscan
+scikit-learn
+
+# --- Environment & Visualization ---
+jupyter
+ipykernel
+matplotlib
+plotly
+pyyaml
