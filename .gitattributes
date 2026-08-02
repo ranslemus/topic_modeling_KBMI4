@@ -4,3 +4,4 @@ data/BRImo_reviews.csv filter=lfs diff=lfs merge=lfs -text
 data/livin_mandiri_reviews.csv filter=lfs diff=lfs merge=lfs -text
 data/merged_reviews.csv filter=lfs diff=lfs merge=lfs -text
 data/filtered_reviews.csv filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
